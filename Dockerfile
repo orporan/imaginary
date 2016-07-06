@@ -33,8 +33,11 @@ WORKDIR $GOPATH
 RUN go get -u golang.org/x/net/context
 RUN go get -u github.com/h2non/imaginary
 
+ENV IMAGINARY_ARGS
+
 # Run the outyet command by default when the container starts.
-ENTRYPOINT ["/go/bin/imaginary"]
+CMD /go/bin/imaginary $IMAGINARY_ARGS
+
 
 # Expose the server TCP port
 EXPOSE 9000
