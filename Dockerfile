@@ -2,5 +2,5 @@
 # and a workspace (GOPATH) configured at /go.
 FROM h2non/imaginary
 MAINTAINER or@crazylister.com
-ENV IMAGINARY_ARGS
+ENV IMAGINARY_ARGS -enable-url-source
 CMD /go/bin/imaginary $IMAGINARY_ARGS
