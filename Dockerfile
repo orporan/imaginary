@@ -32,6 +32,13 @@ WORKDIR $GOPATH
 # Fetch the latest version of the package
 RUN go get -u golang.org/x/net/context
 RUN go get -u github.com/daaku/go.httpgzip
+RUN go get -u github.com/rs/cors
+RUN go get -u github.com/tj/go-debug
+RUN go get -u gopkg.in/h2non/bimg.v1
+RUN go get -u gopkg.in/h2non/filetype.v0
+RUN go get -u gopkg.in/throttled/throttled.v2
+RUN go get -u gopkg.in/throttled/throttled.v2/store/memstore
+
 WORKDIR /tmp
 COPY . .
 RUN make build install
