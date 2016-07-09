@@ -39,10 +39,8 @@ RUN go get -u gopkg.in/h2non/filetype.v0
 RUN go get -u gopkg.in/throttled/throttled.v2
 RUN go get -u gopkg.in/throttled/throttled.v2/store/memstore
 
-WORKDIR /tmp
 COPY . .
-RUN make build install
-WORKDIR $GOPATH
+RUN make build
 
 ENV IMAGINARY_ARGS -enable-url-source -allowed-origins https://img.crazylister.com
 
