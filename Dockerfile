@@ -31,7 +31,7 @@ WORKDIR $GOPATH
 
 # Fetch the latest version of the package
 RUN go get -u golang.org/x/net/context
-RUN build install
+RUN make build install
 
 ENV IMAGINARY_ARGS -enable-url-source -allowed-origins https://img.crazylister.com
 
