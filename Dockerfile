@@ -31,6 +31,7 @@ WORKDIR $GOPATH
 
 # Fetch the latest version of the package
 RUN go get -u golang.org/x/net/context
+RUN go get -u github.com/daaku/go.httpgzip
 WORKDIR /tmp
 COPY . .
 RUN make build install
