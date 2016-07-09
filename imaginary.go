@@ -74,6 +74,7 @@ Options:
 `
 
 func main() {
+  fmt.Println("CL Resizer");
 	flag.Usage = func() {
 		fmt.Fprint(os.Stderr, fmt.Sprintf(usage, Version, runtime.NumCPU()))
 	}
